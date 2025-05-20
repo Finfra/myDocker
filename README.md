@@ -7,6 +7,7 @@ Ubuntu 22.04 기반 개발용 도커 환경 이미지. 다음과 같은 구성 �
 * Base Image: `ubuntu:22.04`
 * 사용자 계정: `dev` (uid/gid: 1000)
 * 작업 디렉토리: `/home/dev/workspace`
+* 이미지명: `nowage/docker`
 
 ## 주요 패키지
 
@@ -29,9 +30,9 @@ Ubuntu 22.04 기반 개발용 도커 환경 이미지. 다음과 같은 구성 �
 
 ```bash
 # docker build
-docker build -t mydocker .
+docker build -t nowage/docker .
 
 # docker run
 docker run -it --rm \
   -v $(pwd):/home/dev/workspace \
-  mydocker
+  nowage/docker
